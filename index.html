@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker V2</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <header>
+        <div>
+            <h1>🔥 Habit Tracker Pro</h1>
+            <p>Build Better Habits Every Day</p>
+        </div>
+
+        <button id="themeToggle">
+            🌙
+        </button>
+    </header>
+
+    <!-- Dashboard -->
+
+    <section class="dashboard">
+
+        <div class="card">
+            <i class="fa-solid fa-list"></i>
+            <h2 id="totalHabits">0</h2>
+            <p>Total Habits</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-circle-check"></i>
+            <h2 id="completedHabits">0</h2>
+            <p>Completed</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-clock"></i>
+            <h2 id="pendingHabits">0</h2>
+            <p>Pending</p>
+        </div>
+
+        <div class="card streak-card">
+            <i class="fa-solid fa-fire"></i>
+            <h2 id="streakCount">0</h2>
+            <p>Day Streak</p>
+        </div>
+
+    </section>
+
+    <!-- Add Habit -->
+
+    <section class="add-habit">
+
+        <input
+            type="text"
+            id="habitInput"
+            placeholder="Enter a habit..."
+        >
+
+        <select id="category">
+
+            <option value="Fitness">
+                💪 Fitness
+            </option>
+
+            <option value="Study">
+                📚 Study
+            </option>
+
+            <option value="Health">
+                💧 Health
+            </option>
+
+            <option value="Work">
+                💼 Work
+            </option>
+
+        </select>
+
+        <button id="addHabitBtn">
+            Add Habit
+        </button>
+
+    </section>
+
+    <!-- Search -->
+
+    <section class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search habits..."
+        >
+
+    </section>
+
+    <!-- Progress -->
+
+    <section class="progress-section">
+
+        <h3>📊 Progress</h3>
+
+        <div class="progress-bar">
+            <div
+                class="progress"
+                id="progress"
+            ></div>
+        </div>
+
+        <p id="progressText">
+            0% Completed
+        </p>
+
+    </section>
+
+    <!-- Achievement -->
+
+    <section class="achievement-section">
+
+        <h3>🏆 Achievements</h3>
+
+        <div id="badges">
+
+            <span class="badge">
+                Beginner
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- Habit List -->
+
+    <section>
+
+        <h3>📅 Today's Habits</h3>
+
+        <div id="habitList">
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
